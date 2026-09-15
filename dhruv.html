@@ -1,0 +1,1263 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dhruv Math Helper</title><style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f3f6fb;
+}
+header{
+    background:#2563eb;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+nav{
+    background:white;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 2px 8px #ccc;
+}
+nav a{
+    margin:8px;
+    text-decoration:none;
+    font-weight:bold;
+    color:#2563eb;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:25px;
+}
+.card{
+    background:white;
+    padding:20px;
+    margin:15px 0;
+    border-radius:15px;
+    box-shadow:0 3px 10px #ddd;
+}
+input{
+    padding:12px;
+    margin:5px;
+    border-radius:8px;
+    border:1px solid #bbb;
+}
+button{
+    padding:11px 16px;
+    margin:5px;
+    background:#2563eb;
+    color:white;
+    border:0;
+    border-radius:8px;
+    cursor:pointer;
+}
+.answer{
+    background:#eefaf1;
+    padding:15px;
+    margin-top:12px;
+    border-radius:10px;
+    white-space:pre-line;
+    line-height:1.7;
+}
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+body{padding-bottom:85px}.bottom-nav{position:fixed;left:0;right:0;bottom:0;height:65px;background:white;display:flex;justify-content:center;align-items:center;gap:10px;box-shadow:0 -3px 12px #ccc;z-index:9999}.bottom-nav a{text-decoration:none;font-weight:bold;color:#2563eb;padding:12px 28px;border-radius:12px}.bottom-nav a.active{background:#2563eb;color:white}
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f3f6fb;
+}
+
+header{
+background:#2563eb;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+nav{
+background:white;
+padding:15px;
+text-align:center;
+box-shadow:0 2px 8px #ccc;
+}
+
+nav a{
+margin:8px;
+text-decoration:none;
+color:#2563eb;
+font-weight:bold;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:25px;
+}
+
+.card{
+background:white;
+padding:20px;
+margin:15px 0;
+border-radius:15px;
+box-shadow:0 3px 10px #ddd;
+}
+
+.formula{
+background:#eef4ff;
+padding:15px;
+border-radius:8px;
+font-size:20px;
+text-align:center;
+}
+
+input{
+padding:12px;
+margin:5px;
+width:150px;
+border-radius:8px;
+border:1px solid #bbb;
+}
+
+button{
+padding:11px 18px;
+background:#2563eb;
+color:white;
+border:0;
+border-radius:8px;
+cursor:pointer;
+}
+
+.answer{
+margin-top:15px;
+padding:15px;
+background:#eefaf1;
+border-radius:10px;
+white-space:pre-line;
+line-height:1.7;
+}
+
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+body{padding-bottom:85px}.bottom-nav{position:fixed;left:0;right:0;bottom:0;height:65px;background:white;display:flex;justify-content:center;align-items:center;gap:10px;box-shadow:0 -3px 12px #ccc;z-index:9999}.bottom-nav a{text-decoration:none;font-weight:bold;color:#2563eb;padding:12px 28px;border-radius:12px}.bottom-nav a.active{background:#2563eb;color:white} .page{display:none}.page.active{display:block}.nav{position:fixed;bottom:0;left:0;right:0;background:#fff;box-shadow:0 -2px 12px #aaa;display:flex;justify-content:center;gap:12px;padding:10px;z-index:99999}.nav button{padding:12px 28px;border:0;border-radius:10px;font-weight:bold;cursor:pointer}.nav .active{background:#2563eb;color:#fff}body{padding-bottom:70px}</style></head><body><section id="home" class="page active">
+
+<header>
+<h1>📚 Dhruv Math Helper</h1>
+<p>Easy Maths • Easy Solutions</p>
+</header>
+
+
+
+<div class="container">
+
+<h2>🧮 Maths Solvers</h2>
+
+<div class="card">
+<h3>➕ Addition / ➖ Subtraction</h3>
+
+<input id="a" type="number" placeholder="Number 1">
+<input id="b" type="number" placeholder="Number 2">
+
+<br>
+
+<button onclick="add()">➕ Addition</button>
+<button onclick="sub()">➖ Subtraction</button>
+
+<div id="basicAnswer" class="answer">Answer:</div>
+</div>
+
+
+<div class="card">
+<h3>✖️ Multiplication / ➗ Division</h3>
+
+<input id="c" type="number" placeholder="Number 1">
+<input id="d" type="number" placeholder="Number 2">
+
+<br>
+
+<button onclick="mul()">✖️ Multiplication</button>
+<button onclick="div()">➗ Division</button>
+
+<div id="mulAnswer" class="answer">Answer:</div>
+</div>
+
+
+<div class="card">
+<h3>💯 Percentage</h3>
+
+<input id="part" type="number" placeholder="Part">
+<input id="total" type="number" placeholder="Total">
+
+<button onclick="percent()">Calculate</button>
+
+<div id="percentAnswer" class="answer">Answer:</div>
+</div>
+
+
+<div class="card">
+<h3>🔢 Factors</h3>
+
+<input id="factor" type="number" placeholder="Number">
+
+<button onclick="factor()">Find Factors</button>
+
+<div id="factorAnswer" class="answer">Answer:</div>
+</div>
+
+
+<div class="card">
+<h3>🔢 Multiples</h3>
+
+<input id="multiple" type="number" placeholder="Number">
+
+<button onclick="multiple()">Find Multiples</button>
+
+<div id="multipleAnswer" class="answer">Answer:</div>
+</div>
+
+
+<div class="card">
+<h3>🟢 HCF / 🔵 LCM</h3>
+
+<input id="hcf1" type="number" placeholder="Number 1">
+<input id="hcf2" type="number" placeholder="Number 2">
+
+<br>
+
+<button onclick="getHCF()">HCF</button>
+<button onclick="getLCM()">LCM</button>
+
+<div id="hcfAnswer" class="answer">Answer:</div>
+</div>
+
+
+<div class="card">
+<h3>🔤 Number Name</h3>
+
+<input id="numberNameInput" type="number" placeholder="Example: 125">
+
+<button onclick="numberName()">Convert</button>
+
+<div id="numberNameAnswer" class="answer">Answer:</div>
+</div>
+
+
+<div class="card">
+<h3>🔢 Roman Number</h3>
+
+<input id="romanInput" type="number" placeholder="Example: 49">
+
+<button onclick="roman()">Convert</button>
+
+<div id="romanAnswer" class="answer">Answer:</div>
+</div>
+
+
+<div class="card">
+<h3>🔄 Round Off</h3>
+
+<input id="roundInput" type="number" placeholder="Number">
+
+<br>
+
+<button onclick="round(10)">Tens</button>
+<button onclick="round(100)">Hundreds</button>
+<button onclick="round(1000)">Thousands</button>
+
+<div id="roundAnswer" class="answer">Answer:</div>
+</div>
+
+
+<div class="card">
+<h3>📏 Rectangle Area & Perimeter</h3>
+
+<input id="length" type="number" placeholder="Length">
+<input id="width" type="number" placeholder="Width">
+
+<button onclick="rectangle()">Calculate</button>
+
+<div id="rectangleAnswer" class="answer">Answer:</div>
+</div>
+
+
+<div class="card">
+<h3>⭕ Circle Area & Circumference</h3>
+
+<input id="radius" type="number" placeholder="Radius">
+
+<button onclick="circle()">Calculate</button>
+
+<div id="circleAnswer" class="answer">Answer:</div>
+</div>
+
+</div>
+
+<footer>
+© 2026 Dhruv Math Helper
+</footer>
+
+
+<script>
+
+function add(){
+let a=+document.getElementById("a").value;
+let b=+document.getElementById("b").value;
+
+document.getElementById("basicAnswer").innerText=
+`Step 1: ${a} + ${b}
+Step 2: ${a+b}
+
+✅ Answer = ${a+b}`;
+}
+
+function sub(){
+let a=+document.getElementById("a").value;
+let b=+document.getElementById("b").value;
+
+document.getElementById("basicAnswer").innerText=
+`Step 1: ${a} - ${b}
+Step 2: ${a-b}
+
+✅ Answer = ${a-b}`;
+}
+
+function mul(){
+let a=+document.getElementById("c").value;
+let b=+document.getElementById("d").value;
+
+document.getElementById("mulAnswer").innerText=
+`Step 1: ${a} × ${b}
+Step 2: ${a*b}
+
+✅ Answer = ${a*b}`;
+}
+
+function div(){
+let a=+document.getElementById("c").value;
+let b=+document.getElementById("d").value;
+
+if(b==0){
+document.getElementById("mulAnswer").innerText=
+"0 se divide nahi kar sakte!";
+return;
+}
+
+document.getElementById("mulAnswer").innerText=
+`Step 1: ${a} ÷ ${b}
+Step 2: ${a/b}
+
+✅ Answer = ${a/b}`;
+}
+
+function percent(){
+let p=+document.getElementById("part").value;
+let t=+document.getElementById("total").value;
+
+let ans=(p/t)*100;
+
+document.getElementById("percentAnswer").innerText=
+`Formula:
+Percentage = (Part ÷ Total) × 100
+
+= (${p} ÷ ${t}) × 100
+= ${ans}%
+
+✅ Answer = ${ans}%`;
+}
+
+function factor(){
+let n=+document.getElementById("factor").value;
+let arr=[];
+
+for(let i=1;i<=Math.abs(n);i++){
+if(n%i==0) arr.push(i);
+}
+
+document.getElementById("factorAnswer").innerText=
+`Factors of ${n}:
+
+${arr.join(", ")}`;
+}
+
+function multiple(){
+let n=+document.getElementById("multiple").value;
+let arr=[];
+
+for(let i=1;i<=10;i++){
+arr.push(n*i);
+}
+
+document.getElementById("multipleAnswer").innerText=
+`First 10 Multiples:
+
+${arr.join(", ")}`;
+}
+
+function hcfCalc(a,b){
+while(b!=0){
+let r=a%b;
+a=b;
+b=r;
+}
+return Math.abs(a);
+}
+
+function getHCF(){
+let a=+document.getElementById("hcf1").value;
+let b=+document.getElementById("hcf2").value;
+
+let ans=hcfCalc(a,b);
+
+document.getElementById("hcfAnswer").innerText=
+`Euclidean Method
+
+HCF = ${ans}
+
+✅ Answer = ${ans}`;
+}
+
+function getLCM(){
+let a=+document.getElementById("hcf1").value;
+let b=+document.getElementById("hcf2").value;
+
+let h=hcfCalc(a,b);
+let ans=Math.abs(a*b)/h;
+
+document.getElementById("hcfAnswer").innerText=
+`Formula:
+LCM = (a × b) ÷ HCF
+
+= (${a} × ${b}) ÷ ${h}
+= ${ans}
+
+✅ LCM = ${ans}`;
+}
+
+function numberName(){
+
+let n=+document.getElementById("numberNameInput").value;
+
+let ones=[
+"zero","one","two","three","four","five",
+"six","seven","eight","nine","ten",
+"eleven","twelve","thirteen","fourteen",
+"fifteen","sixteen","seventeen","eighteen","nineteen"
+];
+
+let tens=[
+"","","twenty","thirty","forty","fifty",
+"sixty","seventy","eighty","ninety"
+];
+
+function convert(x){
+
+if(x<20)return ones[x];
+
+if(x<100)
+return tens[Math.floor(x/10)]+
+(x%10?" "+ones[x%10]:"");
+
+if(x<1000)
+return ones[Math.floor(x/100)]+" hundred"+
+(x%100?" "+convert(x%100):"");
+
+return String(x);
+}
+
+document.getElementById("numberNameAnswer").innerText=
+"Number Name = "+convert(n);
+}
+
+function roman(){
+
+let n=+document.getElementById("romanInput").value;
+
+let values=[
+[1000,"M"],[900,"CM"],[500,"D"],
+[400,"CD"],[100,"C"],[90,"XC"],
+[50,"L"],[40,"XL"],[10,"X"],
+[9,"IX"],[5,"V"],[4,"IV"],[1,"I"]
+];
+
+let result="";
+
+for(let item of values){
+
+while(n>=item[0]){
+result+=item[1];
+n-=item[0];
+}
+
+}
+
+document.getElementById("romanAnswer").innerText=
+"Roman Number = "+result;
+}
+
+function round(place){
+
+let n=+document.getElementById("roundInput").value;
+let ans=Math.round(n/place)*place;
+
+document.getElementById("roundAnswer").innerText=
+`Number = ${n}
+
+Nearest ${place} = ${ans}
+
+✅ Answer = ${ans}`;
+}
+
+function rectangle(){
+
+let l=+document.getElementById("length").value;
+let w=+document.getElementById("width").value;
+
+let area=l*w;
+let perimeter=2*(l+w);
+
+document.getElementById("rectangleAnswer").innerText=
+`Area = Length × Width
+= ${l} × ${w}
+= ${area}
+
+Perimeter = 2 × (Length + Width)
+= 2 × (${l}+${w})
+= ${perimeter}
+
+✅ Area = ${area}
+✅ Perimeter = ${perimeter}`;
+}
+
+function circle(){
+
+let r=+document.getElementById("radius").value;
+
+let area=Math.PI*r*r;
+let circumference=2*Math.PI*r;
+
+document.getElementById("circleAnswer").innerText=
+`Area = πr²
+= ${area.toFixed(2)}
+
+Circumference = 2πr
+= ${circumference.toFixed(2)}
+
+✅ Area = ${area.toFixed(2)}
+✅ Circumference = ${circumference.toFixed(2)}`;
+}
+
+</script>
+
+<div class="bottom-nav"><a class="active" href="index.html">🏠 Home</a><a href="formulas.html">📐 Formulas</a></div></section><section id="formulas" class="page">
+
+<header>
+<h1>📐 Dhruv Math Formulas</h1>
+<p>Formula + Step-by-Step Solution</p>
+</header>
+
+
+
+<div class="container">
+
+<h2>📚 Algebra Identities</h2>
+
+
+<div class="card">
+<h3>1. (a + b)²</h3>
+
+<div class="formula">
+(a + b)² = a² + 2ab + b²
+</div>
+
+<input id="a1" type="number" placeholder="a">
+<input id="b1" type="number" placeholder="b">
+
+<button onclick="plusSquare()">Solve</button>
+
+<div id="ans1" class="answer">Answer:</div>
+</div>
+
+
+<div class="card">
+<h3>2. (a - b)²</h3>
+
+<div class="formula">
+(a - b)² = a² - 2ab + b²
+</div>
+
+<input id="a2" type="number" placeholder="a">
+<input id="b2" type="number" placeholder="b">
+
+<button onclick="minusSquare()">Solve</button>
+
+<div id="ans2" class="answer">Answer:</div>
+</div>
+
+
+<div class="card">
+<h3>3. a² - b²</h3>
+
+<div class="formula">
+a² - b² = (a-b)(a+b)
+</div>
+
+<input id="a3" type="number" placeholder="a">
+<input id="b3" type="number" placeholder="b">
+
+<button onclick="squareDiff()">Solve</button>
+
+<div id="ans3" class="answer">Answer:</div>
+</div>
+
+
+<div class="card">
+<h3>4. (a + b)³</h3>
+
+<div class="formula">
+(a+b)³ = a³ + 3a²b + 3ab² + b³
+</div>
+
+<input id="a4" type="number" placeholder="a">
+<input id="b4" type="number" placeholder="b">
+
+<button onclick="plusCube()">Solve</button>
+
+<div id="ans4" class="answer">Answer:</div>
+</div>
+
+
+<div class="card">
+<h3>5. (a - b)³</h3>
+
+<div class="formula">
+(a-b)³ = a³ - 3a²b + 3ab² - b³
+</div>
+
+<input id="a5" type="number" placeholder="a">
+<input id="b5" type="number" placeholder="b">
+
+<button onclick="minusCube()">Solve</button>
+
+<div id="ans5" class="answer">Answer:</div>
+</div>
+
+
+<div class="card">
+<h3>6. a³ + b³</h3>
+
+<div class="formula">
+a³+b³ = (a+b)(a²-ab+b²)
+</div>
+
+<input id="a6" type="number" placeholder="a">
+<input id="b6" type="number" placeholder="b">
+
+<button onclick="cubePlus()">Solve</button>
+
+<div id="ans6" class="answer">Answer:</div>
+</div>
+
+
+<div class="card">
+<h3>7. a³ - b³</h3>
+
+<div class="formula">
+a³-b³ = (a-b)(a²+ab+b²)
+</div>
+
+<input id="a7" type="number" placeholder="a">
+<input id="b7" type="number" placeholder="b">
+
+<button onclick="cubeMinus()">Solve</button>
+
+<div id="ans7" class="answer">Answer:</div>
+</div>
+
+</div>
+
+<footer>
+© 2026 Dhruv Math Helper
+</footer>
+
+
+<script>
+
+function plusSquare(){
+
+let a=+a1.value;
+let b=+b1.value;
+let answer=(a+b)**2;
+
+ans1.innerText=
+`Formula:
+(a+b)² = a² + 2ab + b²
+
+Step 1:
+(${a}+${b})²
+
+Step 2:
+${a}² + 2×${a}×${b} + ${b}²
+
+Step 3:
+${a*a} + ${2*a*b} + ${b*b}
+
+Step 4:
+${answer}
+
+✅ Answer = ${answer}`;
+}
+
+
+function minusSquare(){
+
+let a=+a2.value;
+let b=+b2.value;
+let answer=(a-b)**2;
+
+ans2.innerText=
+`Formula:
+(a-b)² = a² - 2ab + b²
+
+Step 1:
+(${a}-${b})²
+
+Step 2:
+${a}² - 2×${a}×${b} + ${b}²
+
+Step 3:
+${a*a} - ${2*a*b} + ${b*b}
+
+Step 4:
+${answer}
+
+✅ Answer = ${answer}`;
+}
+
+
+function squareDiff(){
+
+let a=+a3.value;
+let b=+b3.value;
+let answer=a*a-b*b;
+
+ans3.innerText=
+`Formula:
+a²-b² = (a-b)(a+b)
+
+Step 1:
+(${a}-${b})(${a}+${b})
+
+Step 2:
+${a-b} × ${a+b}
+
+Step 3:
+${answer}
+
+✅ Answer = ${answer}`;
+}
+
+
+function plusCube(){
+
+let a=+a4.value;
+let b=+b4.value;
+let answer=(a+b)**3;
+
+ans4.innerText=
+`Formula:
+(a+b)³ = a³ + 3a²b + 3ab² + b³
+
+Step 1:
+(${a}+${b})³
+
+Step 2:
+${a}³ + 3×${a}²×${b} + 3×${a}×${b}² + ${b}³
+
+Step 3:
+${answer}
+
+✅ Answer = ${answer}`;
+}
+
+
+function minusCube(){
+
+let a=+a5.value;
+let b=+b5.value;
+let answer=(a-b)**3;
+
+ans5.innerText=
+`Formula:
+(a-b)³ = a³ - 3a²b + 3ab² - b³
+
+Step 1:
+(${a}-${b})³
+
+Step 2:
+${answer}
+
+✅ Answer = ${answer}`;
+}
+
+
+function cubePlus(){
+
+let a=+a6.value;
+let b=+b6.value;
+let answer=a**3+b**3;
+
+ans6.innerText=
+`Formula:
+a³+b³ = (a+b)(a²-ab+b²)
+
+Step 1:
+(${a}+${b})(${a}²-${a}×${b}+${b}²)
+
+Step 2:
+${answer}
+
+✅ Answer = ${answer}`;
+}
+
+
+function cubeMinus(){
+
+let a=+a7.value;
+let b=+b7.value;
+let answer=a**3-b**3;
+
+ans7.innerText=
+`Formula:
+a³-b³ = (a-b)(a²+ab+b²)
+
+Step 1:
+(${a}-${b})(${a}²+${a}×${b}+${b}²)
+
+Step 2:
+${answer}
+
+✅ Answer = ${answer}`;
+}
+
+</script>
+
+<div class="bottom-nav"><a href="index.html">🏠 Home</a><a class="active" href="formulas.html">📐 Formulas</a></div></section><div class="nav"><button id="hb" class="active" onclick="showPage('home')">🏠 Home</button><button id="fb" onclick="showPage('formulas')">📐 Formulas</button></div><script>function showPage(id){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');document.getElementById('hb').classList.toggle('active',id==='home');document.getElementById('fb').classList.toggle('active',id==='formulas');window.scrollTo(0,0)}
+
+
+function add(){
+let a=+document.getElementById("a").value;
+let b=+document.getElementById("b").value;
+
+document.getElementById("basicAnswer").innerText=
+`Step 1: ${a} + ${b}
+Step 2: ${a+b}
+
+✅ Answer = ${a+b}`;
+}
+
+function sub(){
+let a=+document.getElementById("a").value;
+let b=+document.getElementById("b").value;
+
+document.getElementById("basicAnswer").innerText=
+`Step 1: ${a} - ${b}
+Step 2: ${a-b}
+
+✅ Answer = ${a-b}`;
+}
+
+function mul(){
+let a=+document.getElementById("c").value;
+let b=+document.getElementById("d").value;
+
+document.getElementById("mulAnswer").innerText=
+`Step 1: ${a} × ${b}
+Step 2: ${a*b}
+
+✅ Answer = ${a*b}`;
+}
+
+function div(){
+let a=+document.getElementById("c").value;
+let b=+document.getElementById("d").value;
+
+if(b==0){
+document.getElementById("mulAnswer").innerText=
+"0 se divide nahi kar sakte!";
+return;
+}
+
+document.getElementById("mulAnswer").innerText=
+`Step 1: ${a} ÷ ${b}
+Step 2: ${a/b}
+
+✅ Answer = ${a/b}`;
+}
+
+function percent(){
+let p=+document.getElementById("part").value;
+let t=+document.getElementById("total").value;
+
+let ans=(p/t)*100;
+
+document.getElementById("percentAnswer").innerText=
+`Formula:
+Percentage = (Part ÷ Total) × 100
+
+= (${p} ÷ ${t}) × 100
+= ${ans}%
+
+✅ Answer = ${ans}%`;
+}
+
+function factor(){
+let n=+document.getElementById("factor").value;
+let arr=[];
+
+for(let i=1;i<=Math.abs(n);i++){
+if(n%i==0) arr.push(i);
+}
+
+document.getElementById("factorAnswer").innerText=
+`Factors of ${n}:
+
+${arr.join(", ")}`;
+}
+
+function multiple(){
+let n=+document.getElementById("multiple").value;
+let arr=[];
+
+for(let i=1;i<=10;i++){
+arr.push(n*i);
+}
+
+document.getElementById("multipleAnswer").innerText=
+`First 10 Multiples:
+
+${arr.join(", ")}`;
+}
+
+function hcfCalc(a,b){
+while(b!=0){
+let r=a%b;
+a=b;
+b=r;
+}
+return Math.abs(a);
+}
+
+function getHCF(){
+let a=+document.getElementById("hcf1").value;
+let b=+document.getElementById("hcf2").value;
+
+let ans=hcfCalc(a,b);
+
+document.getElementById("hcfAnswer").innerText=
+`Euclidean Method
+
+HCF = ${ans}
+
+✅ Answer = ${ans}`;
+}
+
+function getLCM(){
+let a=+document.getElementById("hcf1").value;
+let b=+document.getElementById("hcf2").value;
+
+let h=hcfCalc(a,b);
+let ans=Math.abs(a*b)/h;
+
+document.getElementById("hcfAnswer").innerText=
+`Formula:
+LCM = (a × b) ÷ HCF
+
+= (${a} × ${b}) ÷ ${h}
+= ${ans}
+
+✅ LCM = ${ans}`;
+}
+
+function numberName(){
+
+let n=+document.getElementById("numberNameInput").value;
+
+let ones=[
+"zero","one","two","three","four","five",
+"six","seven","eight","nine","ten",
+"eleven","twelve","thirteen","fourteen",
+"fifteen","sixteen","seventeen","eighteen","nineteen"
+];
+
+let tens=[
+"","","twenty","thirty","forty","fifty",
+"sixty","seventy","eighty","ninety"
+];
+
+function convert(x){
+
+if(x<20)return ones[x];
+
+if(x<100)
+return tens[Math.floor(x/10)]+
+(x%10?" "+ones[x%10]:"");
+
+if(x<1000)
+return ones[Math.floor(x/100)]+" hundred"+
+(x%100?" "+convert(x%100):"");
+
+return String(x);
+}
+
+document.getElementById("numberNameAnswer").innerText=
+"Number Name = "+convert(n);
+}
+
+function roman(){
+
+let n=+document.getElementById("romanInput").value;
+
+let values=[
+[1000,"M"],[900,"CM"],[500,"D"],
+[400,"CD"],[100,"C"],[90,"XC"],
+[50,"L"],[40,"XL"],[10,"X"],
+[9,"IX"],[5,"V"],[4,"IV"],[1,"I"]
+];
+
+let result="";
+
+for(let item of values){
+
+while(n>=item[0]){
+result+=item[1];
+n-=item[0];
+}
+
+}
+
+document.getElementById("romanAnswer").innerText=
+"Roman Number = "+result;
+}
+
+function round(place){
+
+let n=+document.getElementById("roundInput").value;
+let ans=Math.round(n/place)*place;
+
+document.getElementById("roundAnswer").innerText=
+`Number = ${n}
+
+Nearest ${place} = ${ans}
+
+✅ Answer = ${ans}`;
+}
+
+function rectangle(){
+
+let l=+document.getElementById("length").value;
+let w=+document.getElementById("width").value;
+
+let area=l*w;
+let perimeter=2*(l+w);
+
+document.getElementById("rectangleAnswer").innerText=
+`Area = Length × Width
+= ${l} × ${w}
+= ${area}
+
+Perimeter = 2 × (Length + Width)
+= 2 × (${l}+${w})
+= ${perimeter}
+
+✅ Area = ${area}
+✅ Perimeter = ${perimeter}`;
+}
+
+function circle(){
+
+let r=+document.getElementById("radius").value;
+
+let area=Math.PI*r*r;
+let circumference=2*Math.PI*r;
+
+document.getElementById("circleAnswer").innerText=
+`Area = πr²
+= ${area.toFixed(2)}
+
+Circumference = 2πr
+= ${circumference.toFixed(2)}
+
+✅ Area = ${area.toFixed(2)}
+✅ Circumference = ${circumference.toFixed(2)}`;
+}
+
+
+
+
+function plusSquare(){
+
+let a=+a1.value;
+let b=+b1.value;
+let answer=(a+b)**2;
+
+ans1.innerText=
+`Formula:
+(a+b)² = a² + 2ab + b²
+
+Step 1:
+(${a}+${b})²
+
+Step 2:
+${a}² + 2×${a}×${b} + ${b}²
+
+Step 3:
+${a*a} + ${2*a*b} + ${b*b}
+
+Step 4:
+${answer}
+
+✅ Answer = ${answer}`;
+}
+
+
+function minusSquare(){
+
+let a=+a2.value;
+let b=+b2.value;
+let answer=(a-b)**2;
+
+ans2.innerText=
+`Formula:
+(a-b)² = a² - 2ab + b²
+
+Step 1:
+(${a}-${b})²
+
+Step 2:
+${a}² - 2×${a}×${b} + ${b}²
+
+Step 3:
+${a*a} - ${2*a*b} + ${b*b}
+
+Step 4:
+${answer}
+
+✅ Answer = ${answer}`;
+}
+
+
+function squareDiff(){
+
+let a=+a3.value;
+let b=+b3.value;
+let answer=a*a-b*b;
+
+ans3.innerText=
+`Formula:
+a²-b² = (a-b)(a+b)
+
+Step 1:
+(${a}-${b})(${a}+${b})
+
+Step 2:
+${a-b} × ${a+b}
+
+Step 3:
+${answer}
+
+✅ Answer = ${answer}`;
+}
+
+
+function plusCube(){
+
+let a=+a4.value;
+let b=+b4.value;
+let answer=(a+b)**3;
+
+ans4.innerText=
+`Formula:
+(a+b)³ = a³ + 3a²b + 3ab² + b³
+
+Step 1:
+(${a}+${b})³
+
+Step 2:
+${a}³ + 3×${a}²×${b} + 3×${a}×${b}² + ${b}³
+
+Step 3:
+${answer}
+
+✅ Answer = ${answer}`;
+}
+
+
+function minusCube(){
+
+let a=+a5.value;
+let b=+b5.value;
+let answer=(a-b)**3;
+
+ans5.innerText=
+`Formula:
+(a-b)³ = a³ - 3a²b + 3ab² - b³
+
+Step 1:
+(${a}-${b})³
+
+Step 2:
+${answer}
+
+✅ Answer = ${answer}`;
+}
+
+
+function cubePlus(){
+
+let a=+a6.value;
+let b=+b6.value;
+let answer=a**3+b**3;
+
+ans6.innerText=
+`Formula:
+a³+b³ = (a+b)(a²-ab+b²)
+
+Step 1:
+(${a}+${b})(${a}²-${a}×${b}+${b}²)
+
+Step 2:
+${answer}
+
+✅ Answer = ${answer}`;
+}
+
+
+function cubeMinus(){
+
+let a=+a7.value;
+let b=+b7.value;
+let answer=a**3-b**3;
+
+ans7.innerText=
+`Formula:
+a³-b³ = (a-b)(a²+ab+b²)
+
+Step 1:
+(${a}-${b})(${a}²+${a}×${b}+${b}²)
+
+Step 2:
+${answer}
+
+✅ Answer = ${answer}`;
+}
+
+</script></body></html>
